@@ -1,0 +1,13 @@
+function check() {
+  let w = document.getElementById("wave").value;
+  let out = document.getElementById("output");
+
+  if (w === "") {
+    out.innerText = "Enter a wavelength!";
+    return;
+  }
+
+  if (w < 400) out.innerText = "UV Spectrum ☢️";
+  else if (w <= 700) out.innerText = "Visible Spectrum 🌈";
+  else out.innerText = "IR Spectrum 🔥";
+}
