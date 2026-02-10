@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Balance the Bonds</title>
+</head>
+<body>
+  <h2>Balance the Bonds</h2>
+  <p>Balance the equation:</p>
+
+  <h3>H₂ + O₂ → H₂O</h3>
+
+  <input type="number" id="h2" placeholder="H₂">
+  <input type="number" id="o2" placeholder="O₂">
+  <input type="number" id="h2o" placeholder="H₂O">
+
+  <br><br>
+
+  <button onclick="check()">Check Balance</button>
+
+  <h3 id="result"></h3>
+
+  <script>
+    function check() {
+      let h2 = document.getElementById("h2").value;
+      let o2 = document.getElementById("o2").value;
+      let h2o = document.getElementById("h2o").value;
+
+      document.getElementById("result").innerText =
+        (h2 == 2 && o2 == 1 && h2o == 2) ? "Balanced! 🎉" : "Try Again ❌";
+    }
+  </script>
+</body>
+</html>
