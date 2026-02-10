@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stoichiometry Solver</title>
+</head>
+<body>
+  <h2>Stoichiometry Solver</h2>
+
+  <label>Given Moles:</label>
+  <input type="number" id="given" placeholder="Enter moles">
+
+  <br><br>
+
+  <label>Conversion Factor:</label>
+  <input type="number" id="factor" placeholder="Enter factor">
+
+  <br><br>
+
+  <button onclick="solve()">Calculate</button>
+
+  <h3 id="result"></h3>
+
+  <script>
+    function solve() {
+      let g = document.getElementById("given").value;
+      let f = document.getElementById("factor").value;
+      document.getElementById("result").innerText =
+        "Result: " + (g * f) + " moles";
+    }
+  </script>
+</body>
+</html>
