@@ -1,0 +1,13 @@
+function solve() {
+  let given = document.getElementById("given").value;
+  let factor = document.getElementById("factor").value;
+
+  if (given === "" || factor === "") {
+    document.getElementById("result").innerText = "Enter all values!";
+    return;
+  }
+
+  let answer = given * factor;
+  document.getElementById("result").innerText =
+    "Result: " + answer.toFixed(2) + " moles";
+}
