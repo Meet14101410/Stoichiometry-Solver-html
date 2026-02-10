@@ -1,0 +1,14 @@
+function check() {
+  let h2  = document.getElementById("h2").value;
+  let o2  = document.getElementById("o2").value;
+  let h2o = document.getElementById("h2o").value;
+  let res = document.getElementById("result");
+
+  if (h2 === "" || o2 === "" || h2o === "") {
+    res.innerText = "Fill all coefficients!";
+    return;
+  }
+
+  res.innerText =
+    (h2 == 2 && o2 == 1 && h2o == 2) ? "Balanced! 🎉" : "Not balanced ❌";
+}
